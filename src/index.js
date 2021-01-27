@@ -33,7 +33,10 @@ app.use(taskRouter);
 //     return this;
 // }
 
+app.get('/', (req,res) => {
+    res.send('Congrats, app is working. Please switch to postman.');
+})
+
 app.listen(port,() => {
-    console.log("sds",process.env.JWT_TOKEN_KEY);
-    console.log('A REST API Web service || Server connected successfully on port ', port);
+    console.log('A REST API Web service || Server connected successfully on port', port);
 })
