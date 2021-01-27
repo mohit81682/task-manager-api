@@ -36,12 +36,12 @@ router.post('/users/login', async (req,res) => {
         //const user = await User.findByCredentials(req.body.email, req.body.password);
         const user = await User.findOne({'email':req.body.email});
         if(!user){
-            throw new Error('unable to login');
+            throw new Error('Invalid credentials.');
         }
         const token = await user.generateWebToken();
         res.status(201).send({user: user, token});
 	} catch(e){
-		res.status(500).send(e);
+		res.status(500).send(e.message);
 	}
 })
 
