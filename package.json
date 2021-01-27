@@ -11,9 +11,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "engines": {
-    "node": "8.x"
-  },
   "devDependencies": {
     "env-cmd": "^8.0.2",
     "nodemon": "^2.0.7"
